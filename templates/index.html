@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+
+<h2>Company Information</h2>
+<br><br><br>
+<button type="button" name="button"><a href="{{url_for('insert')}}">Add Company</a></button>
+
+<table border="1px solid">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>PhoneNumber</th>
+    <th>Action</th>
+  </tr>
+  {% for row in Business %}
+
+    <tr>
+      <td>{{row.id}}</td>
+      <td>{{row.name}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.phone}}</td>
+      <td>
+        <button type="button" name="button"><a href="/update/{{row.id}}/">Update</a></button>
+        <button type="button" name="button"><a href="/delete/{{row.id}}">Delete</a></button>
+      </td>
+    </tr>
+  {% endfor %}
+</table>
+
+
+
+
+
+ {% endblock %}
+
+  <!-- Part of the strucure were from https://www.youtube.com/watch?v=XTpLbBJTOM4
+ But I have modified it based on the requirement and the function I want. Thank you for the comment -->

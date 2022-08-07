@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Update {% endblock %}
+
+
+{% block body %}
+
+<form action="" method="post">
+  <!-- <label>Index</label> -->
+  <input type="hidden" name="id" required="1">
+
+  <br>
+  <label>Name</label>
+  <input type="text" name="name" required="1">
+  <br>
+  <label>Email</label>
+  <input type="text" name="email" required="1">
+  <br>
+  <label>phone</label>
+  <input type="text" name="phone" required="1">
+  <br>
+  <button type="submit" action="post">Update</button>
+
+
+</form>
+
+<!-- Part of the strucure were from https://www.youtube.com/watch?v=XTpLbBJTOM4
+But I have modified it based on the requirement and the function I want. Thank you for the comment -->
+
+
+
+{% endblock %}
